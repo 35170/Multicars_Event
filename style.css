@@ -1,0 +1,555 @@
+/* ------------------------------------------------------------------- */
+/*                       CSS - Multicarsevent                          */
+/* ------------------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.flex_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body.flex_container {
+    justify-content: space-between;
+    background: url(img-css/background.png);
+}
+
+/* ------------------------------------------------------------------- */
+/*                              HEADER                                 */
+/* ------------------------------------------------------------------- */
+header.header {
+    position: fixed;
+    background: url(img-css/background.png);
+    height: 70px;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 9999;
+    align-items: flex-end
+}
+
+div.log img {
+    width: 100%;
+}
+
+div.log {
+    width: 58%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.log a {
+    width: 50px;
+    height: 50px
+}
+
+/* ------------------------------------------------------------------- */
+/*                             NAVIGATION                              */
+/* ------------------------------------------------------------------- */
+nav.flex_container {
+    background: url(img-css/background.png);
+    justify-content: space-around;
+    flex-direction: row;
+    box-shadow: 0 1px black;
+    z-index: 9999;
+}
+
+nav.flex_container a {
+    text-decoration: none;
+    color: #dfe906;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ------------------------------------------------------------------- */
+/*                    CORPS DE PAGE / ARTICLES                         */
+/* ------------------------------------------------------------------- */
+section.flex_container {
+    margin-top: 70px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background: url(img-css/background.png);
+}
+
+article.flex_container {
+    margin-top: 10px;
+    border: 1px 0.5px solid black;
+    width: 80% ;
+    height: 300px;
+}
+
+article.star {
+    justify-content: space-around;
+    height: 200px;
+    order: 10;
+    box-shadow: 1px 1px 5px white, -1px 1px 5px white, 1px -1px 5px white, -1px -1px 5px white;
+}
+
+article.star img {
+    width: 20%;
+}
+
+article.star p {
+    text-align: center;
+    font-size: 12px;
+    color: #f0f0cf;
+}
+
+article.avenir {
+    order: 20;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+    box-shadow: 1px 1px 5px white, -1px 1px 5px white, 1px -1px 5px white, -1px -1px 5px white;
+}
+
+div.av {
+    flex-direction: row;
+    align-items: flex-start;
+    height: 170px;
+    overflow-y: hidden;
+    justify-content: center;
+}
+div.mois {
+    width: 100%;
+}
+
+div.av img {
+    width: 100%;
+    height: 170px;
+}
+
+div.av img:hover {
+    order: 2;
+}
+
+h2 {
+    text-transform: capitalize;
+    color: #dfe906;
+    text-align: center;
+    font-size: 15px
+}
+
+article.avenir p {
+    height: 150px;
+    font-size: 12px;
+    color: #f0f0cf;
+    text-align: center;
+}
+
+div.av p:hover {
+    order: -1;
+}
+
+article.site {
+    justify-content: space-around;
+    width: 80%;
+    height: 200px;
+    order: 30;
+    box-shadow: 1px 1px 5px white, -1px 1px 5px white, 1px -1px 5px white, -1px -1px 5px white;
+}
+
+article.site img {
+    width: 80%;
+    height: 160px
+}
+
+
+/* ------------------------------------------------------------------- */
+/*                            CARROUSEL                                */
+/* ------------------------------------------------------------------- */
+article.carrousel1 {
+    margin-bottom: 10px;
+    width: 80%;
+    height: 155px;
+    order: 40;
+    box-shadow: 1px 1px 5px white, -1px 1px 5px white, 1px -1px 5px white, -1px -1px 5px white;
+}
+article.slider figure img {
+    width: 215px;
+    height: 150px;
+}
+article.slider {
+    width: 215px;
+    overflow: hidden;
+    height: 150px;
+    padding-bottom: 20px;
+}
+@keyframes slidy {
+    0% { left: 200%;}
+    20% { left: 200%;}
+    25% { left: 100%;}
+    45% { left: 100%;}
+    50% { left: 0%;}
+    70% { left: 0%;}
+    75% { left: -100%;}
+    95% { left: -100%;}
+    95% { left: -200%;}
+    95% { left: -200%;}
+    100% { left: -200%;}
+}
+article.slider figure {
+    position: relative;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    left: 0;
+    text-align: left;
+    flex-direction: row;
+    animation: 20s slidy infinite;
+    animation-timing-function: steps(1);
+}
+/* ------------------------------------------------------------------- */
+/*                            PARTENAIRE                               */
+/* ------------------------------------------------------------------- */
+aside.partenaire {
+    height: 35px;
+    align-items: stretch;
+    background-color: antiquewhite;
+}
+article.partenaire figure img {
+    width: 30px;
+    height: 30px;
+}
+article.partenaire {
+    margin: 0;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: hidden;
+    height: 30px;
+    width: 100%;
+}
+@keyframes banniere {
+    0% {left: -22%;}
+    100% {left: 22%;}
+}
+
+article.partenaire figure {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    left: 0;
+    text-align: left;
+    flex-direction: row;
+    animation: 10s banniere alternate infinite;
+}
+/* ------------------------------------------------------------------- */
+/*                            FOOTER                                */
+/* ------------------------------------------------------------------- */
+footer.flex_container {
+    border-top: 2px solid black;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #232322;
+    height: 70px;
+    order 100;
+}
+
+div.contact {
+    height: 70px;
+    align-items: flex-start;
+    flex-direction: column nowrap;
+}
+
+footer p {
+    color: #f0f0cf;
+    font-size: 7px;
+}
+
+footer ul {
+    height: 50px;
+    padding: 0 8px;
+    color: #f0f0cf;
+    font-size: 10px;
+}
+
+footer img {
+    width: 40px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #f0f0cf;
+    font-size: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  /* make it look decent enough */
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: tomato;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+@media all and (max-width:1600px) {}
+
+@media all and (max-width:1440px) {}
+
+@media all and (min-width:700px) and(max-width:900px) {
+    
+}
+
+@media all and (min-width:450px) and (max-width:800px) {
+    body.flex_container {
+        height: 639px;
+        justify-content: space-between;
+    }
+
+    div.log {
+        width: 53.70%;
+    }   
+    
+    section.flex_container {
+        height: 550px;
+    }
+    article.flex_container {
+        width: 47%;
+        height: 200px;
+    }
+
+    article.star img {
+        width: 20%;
+        float: center ;
+    }
+
+    article.star p {
+        font-size: 12px;
+    }
+
+    article.avenir {
+        justify-content: space-around;
+    }
+
+    article.avenir p {
+        font-size: 12px;
+    
+    }
+
+    article.avenir img {
+        width: 100%;
+    }
+
+    div.av {
+        justify-content: center;
+        align-content: center;
+    }
+
+    article.site {
+        margin-bottom: 10px;
+    }
+
+    article.site img {
+        width: 80%;
+        height: 150px;
+    }
+    
+    article.slider figure img {
+        width: 110%;
+        height: 180px;
+    }
+    article.slider {
+        width: 95%;
+        max-width: 475%;
+        overflow-x: hidden;
+        height: 180px;
+        order: 40;
+        padding: 0px;
+        margin-bottom: 10px;
+    
+    }
+    @keyframes slidy {
+        0% { left: 210%;}
+        20% { left: 210%;}
+        25% { left: 105%;}
+        45% { left: 105%;}
+        50% { left: 0%;}
+        70% { left: 0%;}
+        75% { left: -105%;}
+        95% { left: -105%;}
+        95% { left: -210%;}
+        100% { left: -210%;}
+    }
+    article.slider figure {
+        position: relative;
+        width: 95%;
+        height: 180px;
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+        left: 0;
+        text-align: left;
+        flex-direction: row;
+        animation: 20s slidy linear infinite;
+        animation-timing-function: steps(1);
+    }
+}
